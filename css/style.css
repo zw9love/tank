@@ -1,0 +1,175 @@
+*{margin:0;padding: 0;}
+
+body{
+    background:#ccc;
+    height:667px;
+    overflow:hidden;
+    perspective:800px;
+    -webkit-transition:all 2s ease 0s;
+}
+
+.mytank{
+    width:60px;
+    height:60px;
+    background:#ccc;
+    position:absolute;
+    z-index: 5;
+    -webkit-transform:rotate(0deg);
+}
+
+.mytankshot{
+    width:30px;
+    height:30px;
+    border-radius:25px;
+    background:#666;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.enemytank{
+    width:60px;
+    height:60px;
+    background:#ccc;
+    position:absolute;
+    top:60px;
+}
+
+.enemyshot{
+    width:10px;
+    height:10px;
+    background:#666;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.all{
+    position:relative;
+    left:0;
+    top:0;
+    background:url(../tank/bg.jpg);
+    background-size:cover;
+    overflow:hidden
+}
+
+.big{
+    width:80%;
+    height:50px;
+    background:transparent;
+    border:1px solid #666;
+    position:relative;
+    margin:10% auto 0 auto;
+    border-radius:20px;
+    overflow:hidden;
+    text-align: center;
+    color:#fff;
+    font-family:"微软雅黑";
+    font-size:20px;
+}
+.small{
+    width:0px;
+    height:50px;
+    background:-webkit-linear-gradient(top,#20587B,#4FCBD7,#9FF7FF 50%,#4FCBD7,#20587B);
+}
+.jindu{
+    position:absolute;
+    z-index:20;
+    width:100%;
+    height:100%;
+    text-align:center;
+    line-height:50px;
+}
+
+.win{
+    width:51%;
+    position:absolute;
+    left:42.5%;
+    top:50%;
+    z-index:800;
+    -webkit-transform:translateX(-50%) translateY(-50%) translateZ(800px);display: block;
+    -webkit-transition:all 1s ease 0s;
+    opacity:0;
+    border-radius:20px;
+}
+
+.lose{
+    width:51%;
+    position:absolute;
+    left:42.5%;
+    top:50%;
+    z-index:-10;
+    -webkit-transform:translateX(-50%) translateY(-50%) translateZ(800px);
+    -webkit-transition:all 1s ease 0s;
+    opacity:0;
+    border-radius:50px;
+}
+.btn{
+    padding: 20px 30px;
+    box-sizing:border-box;
+    display:block;
+    position:absolute;
+    left:42.5%;
+    top:50%;
+    z-index:1000;
+    -webkit-transform:translateX(0%) translateY(0%) translateZ(800px);
+    -webkit-transition:all 1s ease 1s;
+    opacity:0;
+    border-radius:30%;
+    box-shadow:10px 10px 10px;
+    outline:none;
+    font-size:20px; 
+}
+
+.nav{
+    width:15%;
+    height:100%;
+    background:#333;
+    position:absolute;
+    right:0;
+    color:#fff;
+}
+/*.goalcount,.lifecount{
+    font-size:30px;
+    line-height:120px;
+}*/
+.count{
+    /*float:left;*/
+    text-align:center;
+    font-size:40px;
+    box-sizing:border-box;
+    padding: 20px 0px;
+
+
+}
+
+.mylife{
+    text-align: center;
+}
+.mylife_count{
+    overflow:hidden;
+    /*line-height: 85px;*/
+    /*text-align: center;*/
+    font-size: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.lifecount{
+    position: absolute;
+    right: 0;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+
+
+
+@media (max-width:1000px){
+    .count,.mylife_count{
+        font-size:30px; 
+    }
+
+    .mylife_count img{
+        width:45px;
+        height: auto;
+    }
+}
